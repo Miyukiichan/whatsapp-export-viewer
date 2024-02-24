@@ -122,7 +122,7 @@ foreach(var day in chat) {
                 var text = processUrl(line);
                 div.AppendChild(HtmlNode.CreateNode($"<p>{text}</p>"));
             }
-            }
+        }
         div.AppendChild(HtmlNode.CreateNode($"<p class='time'>{msg.Time.ToShortTimeString()}</p>"));
     }
 }
@@ -151,7 +151,6 @@ public class Options
     public string Directory { get; set; }
     [Option('o', "output", Required = true, HelpText = "Output html file")]
     public string Output { get; set; }
-
     [Option('u', "user", Required = true, HelpText = "The name of the user from which the extract should be performed - ie who is the sender")]
     public string User { get; set; }
 }
